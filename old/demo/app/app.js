@@ -5,42 +5,24 @@
 // Bootstrap
 
 
-// First Create the Component
+
 var AppComponent = ng.core
   .Component({
-    selector: "app",
+    selector: 'app',
     template: `
-      <p>
-        Hello
-        <em>Angular!</em>
-      </p>
+      <div>
+        <h1>Hello World</h1>
+        <p>Hello World</p>
+      </div>
     `
   })
   .Class({
     constructor: function() {}
   });
 
-
-//Next add the component to a module
-var AppModule =
-  ng.core.NgModule({
-    imports: [ ng.platformBrowser.BrowserModule ],
-    declarations: [ AppComponent ],
-    bootstrap: [ AppComponent ]
-  })
-  .Class({
-    constructor: function() {}
-  });
-
-
-// Finally bootstrap
-ng.platformBrowserDynamic
-  .platformBrowserDynamic()
-  .bootstrapModule(AppModule);
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   ng.platform.browser.bootstrap(AppComponent, []);
-// });
+document.addEventListener('DOMContentLoaded', function() {
+  ng.platform.browser.bootstrap(AppComponent, []);
+});
 
 
 
