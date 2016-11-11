@@ -21,7 +21,9 @@ var AppComponent = ng.core
   });
 
 
-//Next add the component to a module
+/**
+  * Next add the component to a module
+  */
 var AppModule =
   ng.core.NgModule({
     imports: [ ng.platformBrowser.BrowserModule ],
@@ -33,7 +35,9 @@ var AppModule =
   });
 
 
-// Finally bootstrap
+/**
+  * Finally bootstrap
+  */
 ng.platformBrowserDynamic
   .platformBrowserDynamic()
   .bootstrapModule(AppModule);
